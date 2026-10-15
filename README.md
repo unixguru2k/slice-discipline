@@ -13,7 +13,15 @@ MACH-AI:
     /skills install unixguru2k/slice-discipline
     /skills activate slice-discipline
 
-Claude Code:
+Claude Code (via the skills CLI — auto-detects Claude Code and installs
+to the right location):
+
+    npx skills add unixguru2k/slice-discipline
+
+    # Global (available in all projects)
+    npx skills add -g unixguru2k/slice-discipline
+
+Or plain git clone:
 
     # Personal skills (available in all projects)
     mkdir -p ~/.claude/skills

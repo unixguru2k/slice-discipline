@@ -13,8 +13,24 @@ MACH-AI:
     /skills install unixguru2k/slice-discipline
     /skills activate slice-discipline
 
-Claude Code / other agents: copy this repo (or add it as a git submodule)
-so that SKILL.md sits in your agent's skill directory.
+Claude Code:
+
+    # Personal skills (available in all projects)
+    mkdir -p ~/.claude/skills
+    git clone https://github.com/unixguru2k/slice-discipline ~/.claude/skills/slice-discipline
+
+    # Or per-project (committed with the repo)
+    mkdir -p .claude/skills
+    git clone https://github.com/unixguru2k/slice-discipline .claude/skills/slice-discipline
+
+Claude Code discovers any directory containing a SKILL.md under
+`~/.claude/skills/` (personal) or `.claude/skills/` (project) — no
+registration step. The skill activates when your request matches its
+description (planning, slicing work, delegating sub-tasks, deciding
+whether a turn is done).
+
+Other agents: copy this repo (or add it as a git submodule) so that
+SKILL.md sits in your agent's skill directory.
 
 ## Updating (when vendored as a submodule)
 

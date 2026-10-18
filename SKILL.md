@@ -19,8 +19,9 @@ Three disciplines:
 
 ## 1. Plan in slices
 
-When presenting an implementation plan for approval (plan mode / your
-plan-presentation tool), decompose the work into slices, each in this shape:
+When presenting an implementation plan for approval (however your agent
+surfaces plans — a plan-presentation tool, a plan document, or plain
+conversation), decompose the work into slices, each in this shape:
 
 ### Slice N: <name in domain language — "Use a saved card at checkout", not "add billing column">
 - Ships: <what the user can do after this that they couldn't before>
@@ -88,7 +89,8 @@ instead of re-deriving state from git log.
 
 **Where the plan lives:** plan documents are saved in the project's
 `plans/` folder as `plans/<slug>.md` (lowercase, hyphenated slug — your
-plan tool saves there automatically when it saves plans). When you start
+plan tool saves there automatically when it saves plans, if it has one).
+When you start
 working from a plan that isn't saved there yet — the user pasted one, or
 it predates the convention — save it to `plans/<slug>.md` first, then
 record each slice's outcome in that file. A plan that exists only in the

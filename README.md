@@ -34,8 +34,9 @@ Or plain git clone:
 Claude Code discovers any directory containing a SKILL.md under
 `~/.claude/skills/` (personal) or `.claude/skills/` (project) — no
 registration step. The skill activates when your request matches its
-description (planning, slicing work, delegating sub-tasks, deciding
-whether a turn is done).
+description (planning or breaking down work, executing a plan document
+that has a slice list, delegating a sub-task, keeping a plan current).
+It is inert for standalone edits and questions — those are just done.
 
 Other agents: copy this repo (or add it as a git submodule) so that
 SKILL.md sits in your agent's skill directory.

@@ -1,8 +1,8 @@
 ---
 name: slice-discipline
-description: Work in slices — decompose implementation plans into shippable increments, each with a named owner and a done test that proves the outcome (Verify lines for subagent delegation). Use when planning implementation work, breaking a feature into steps, delegating sub-tasks, deciding whether a coding turn is complete, or keeping a plan document current and archiving it when the work ships.
+description: Work in slices — decompose implementation plans into shippable increments, each with a named owner and a done test that proves the outcome (Verify lines for subagent delegation). Use when the user asks you to plan or break down work, when executing a plan document that has a slice list, when delegating a sub-task, or when keeping a plan document current and archiving it once it ships. Not for standalone edits or questions — those are just done.
 tags: [workflow, planning, delegation, verification]
-version: 1.4.1
+version: 1.5.0
 author: MACHAAO
 ---
 
@@ -14,6 +14,23 @@ is the working unit that closes that gap: a shippable increment with one
 named owner and a done test that proves the outcome in the real world —
 all six INVEST qualities of a good user story, plus the two things INVEST
 leaves out (the named owner and the real-world done test).
+
+## When this applies
+
+The trigger is binary — decide it before anything else:
+
+- **Applies** when you are planning work, or when a plan document with a
+  slice list exists in `plans/` and you are executing it. Then every rule
+  below governs the turn.
+- **Inert** otherwise. A standalone request — a question, a one-file edit,
+  a small fix — is just done: no slice ceremony, no "shall I continue?",
+  no forced stop after the first change. Do the work, verify it, report.
+
+The pacing rule ("one slice per turn, then stop") is scoped to the
+**Applies** case only. It exists so a multi-slice plan can be verified and
+reviewed one increment at a time — it is not a general instruction to
+under-deliver on ordinary requests. When in doubt, ask: *is there a plan
+document with a slice list?* If no, this skill is inert.
 
 Three disciplines:
 

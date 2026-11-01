@@ -1,12 +1,16 @@
 ---
 name: slice-discipline
-description: Work in slices — decompose implementation plans into shippable increments, each with a named owner and a done test that proves the outcome (Verify lines for subagent delegation). Use when the user asks you to plan or break down work, when executing a plan document that has a slice list, when delegating a sub-task, or when keeping a plan document current and archiving it once it ships. Not for standalone edits or questions — those are just done.
+description: Use when the user asks you to plan or break down work, when executing a plan document that has a slice list, when delegating a sub-task, or when keeping a plan document current. Not for standalone edits or questions — those are just done. Work in slices — decompose implementation plans into shippable increments, each with a named owner and a done test that proves the outcome (Verify lines for subagent delegation).
 tags: [workflow, planning, delegation, verification]
 version: 1.5.0
 author: MACHAAO
 ---
 
 # Slice Discipline
+
+**Inert otherwise.** A standalone request — a question, a one-file edit, a
+small fix — is just done: no slice ceremony, no "shall I continue?", no
+forced stop after the first change. Do the work, verify it, report.
 
 AI compresses *doing*, not *done*. Producing code is cheap; verifying,
 integrating, and deciding whether it was worth building is not. The slice
@@ -22,9 +26,8 @@ The trigger is binary — decide it before anything else:
 - **Applies** when you are planning work, or when a plan document with a
   slice list exists in `plans/` and you are executing it. Then every rule
   below governs the turn.
-- **Inert** otherwise. A standalone request — a question, a one-file edit,
-  a small fix — is just done: no slice ceremony, no "shall I continue?",
-  no forced stop after the first change. Do the work, verify it, report.
+- **Inert** otherwise — a standalone request is just done (stated at the
+  top of this skill).
 
 The pacing rule ("one slice per turn, then stop") is scoped to the
 **Applies** case only. It exists so a multi-slice plan can be verified and

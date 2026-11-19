@@ -23,17 +23,23 @@ leaves out (the named owner and the real-world done test).
 
 The trigger is binary — decide it before anything else:
 
-- **Applies** when you are planning work, or when a plan document with a
-  slice list exists in `plans/` and you are executing it. Then every rule
-  below governs the turn.
+- **Applies** when the user asks you to plan or break down work.
+- **Applies** when you are executing a plan document that has a slice list
+  — the user named it, or you are working through its slices. Then every
+  rule below governs the turn.
 - **Inert** otherwise — a standalone request is just done (stated at the
   top of this skill).
+
+A plan document merely *existing* in `plans/` is not a trigger. If the
+user asked for a change and no plan is being executed, this skill is
+inert.
 
 The pacing rule ("one slice per turn, then stop") is scoped to the
 **Applies** case only. It exists so a multi-slice plan can be verified and
 reviewed one increment at a time — it is not a general instruction to
-under-deliver on ordinary requests. When in doubt, ask: *is there a plan
-document with a slice list?* If no, this skill is inert.
+under-deliver on ordinary requests. When in doubt, ask: *is the user
+asking for a plan, or are you executing a plan they named?* If neither,
+this skill is inert.
 
 Three disciplines:
 

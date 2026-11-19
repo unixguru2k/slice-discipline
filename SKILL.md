@@ -2,7 +2,7 @@
 name: slice-discipline
 description: Use when the user asks you to plan or break down work, when executing a plan document that has a slice list, when delegating a sub-task, or when keeping a plan document current. Not for standalone edits or questions — those are just done. Work in slices — decompose implementation plans into shippable increments, each with a named owner and a done test that proves the outcome (Verify lines for subagent delegation).
 tags: [workflow, planning, delegation, verification]
-version: 1.5.0
+version: 1.6.0
 author: MACHAAO
 ---
 
@@ -112,6 +112,14 @@ tracking issue) before moving on:
 This is one small edit per slice, not a status report: the plan file is
 the running record, and the next session (or the next owner) reads it
 instead of re-deriving state from git log.
+
+**Commit after every slice.** The slice's code, its done test, and the
+plan-file update above are one unit — commit them together before the
+turn ends (conventional commit message; include the plan doc). An
+uncommitted slice is invisible to git: a later session cannot see where
+the work stopped, and a revert or a checkout silently discards it. If
+the work lives in a submodule, commit inside the submodule first, then
+bump the parent repo's submodule pointer.
 
 **Where the plan lives:** plan documents are saved in the project's
 `plans/` folder as `plans/<slug>.md` (lowercase, hyphenated slug — your
